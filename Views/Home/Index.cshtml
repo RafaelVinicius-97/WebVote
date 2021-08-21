@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Votação";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            Usuário: <input type="text" id="userInput" />
+        </div>
+        <div class="col-6">&nbsp;</div>
+    </div>
+    <br />
+    <div class="row">Votação: Qual é o melhor mago?&nbsp;</div>
+    <br />
+    <div class="row">
+        <div class="col-12">
+            <input type="radio" name="myChannel" id="alvoDumbledore" value="Alvo Dumbledore" />
+            <label for="alvoDumbledore">Alvo Dumbledore</label>
+            <br /><span id="alvoDumbledoreBlock"></span><br />
+            <input type="radio" name="myChannel" id="gandalf" value="Gandalf" />
+            <label for="gandalf">Gandalf</label>
+            <br /><span id="gandalfBlock"></span><br />
+            <input type="radio" name="myChannel" id="naoPossui" value="Nenhum" />
+            <label for="naoPossui">Nenhum dos dois.</label>
+            <br /><span id="naoPossuiBlock"></span><br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="button" id="sendButton" value="Votar" />
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/poll.js"></script>
